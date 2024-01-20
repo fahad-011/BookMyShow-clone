@@ -52,7 +52,7 @@
     >> https://headlessui.com/react/dialog
     >> https://react-icons.github.io/react-icons/
 
-theMovieDb APIKey = c54ab2f18bdf2fcbf4283c5aa5ab488c
+theMovieDb APIKey = 'Enter your API Key'
 
 
 # Devops

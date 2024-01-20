@@ -38,10 +38,6 @@
     >> HeadlessUI: npm install @headlessui/react
     >> React-Icons: npm install react-icons
     >> React Router Dom: npm i react-router-dom
-                       
-
-
-
 
 
 ## Resources:
@@ -52,3 +48,6 @@
     >> https://headlessui.com/react/dialog
     >> https://react-icons.github.io/react-icons/
 
+theMovieDb APIKey = 'Enter your API Key'
+
+Testing doc: https://itechsight.com/razorpay-testing-cards/

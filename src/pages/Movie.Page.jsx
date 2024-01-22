@@ -18,37 +18,54 @@ const MoviePage = () => {
   const [similarMovies, setSimilarMovies] = useState([]);
   const [recommendedMovies, setRecommendedMovies] = useState([]);
 
-  useEffect(() => {
-    const requestSimilarMovies = async () => {
-      const getSimilarMovies = await axios.get(`/movie/${id}/similar`);
-      setSimilarMovies(getSimilarMovies.data.results);
+useEffect(() => {
+    const fetchCast = async () => {
+      try {
+        const response = await axios.get(`/movie/${id}/credits`);
+        setCast(response.data.cast);
+      } catch (error) {
+        console.error("Error fetching cast data:", error);
+      }
     };
-    requestSimilarMovies();
-  }, [id]);
 
-  useEffect(() => {
-    const requestRecommendedMovies = async () => {
-      const getRecommendedMovies = await axios.get(
-        `/movie/${id}/recommendations`
-      );
-      setRecommendedMovies(getRecommendedMovies.data.results);
+    const fetchSimilarMovies = async () => {
+      try {
+        const response = await axios.get(`/movie/${id}/similar`);
+        setSimilarMovies(response.data.results);
+      } catch (error) {
+        console.error("Error fetching similar movies:", error);
+      }
     };
-    requestRecommendedMovies();
-  }, [id]);
 
-  useEffect(() => {
-    const requestMovie = async () => {
-      const getMovieData = await axios.get(`/movie/${id}`);
-      setMovie(getMovieData.data);
+    const fetchRecommendedMovies = async () => {
+      try {
+        const response = await axios.get(`/movie/${id}/recommendations`);
+        setRecommendedMovies(response.data.results);
+      } catch (error) {
+        console.error("Error fetching recommended movies:", error);
+      }
     };
-    requestMovie();
-  }, [id]);
+
+    const fetchMovie = async () => {
+      try {
+        const response = await axios.get(`/movie/${id}`);
+        setMovie(response.data);
+      } catch (error) {
+        console.error("Error fetching movie details:", error);
+      }
+    };
+
+    fetchCast();
+    fetchSimilarMovies();
+    fetchRecommendedMovies();
+    fetchMovie();
+  }, [id, setMovie]);
 
   const settingsCast = {
     arrows: true,
-    slidesToShow: 3,
+    slidesToShow: 5,
     infinite: true,
-    dots: true,
+    dots: false,
     // speed: 500,
     slidesToScroll: 1,
 
@@ -63,7 +80,7 @@ const MoviePage = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
       {
@@ -181,14 +198,15 @@ const MoviePage = () => {
           <h2 className="text-gray-800 font-bold text-2xl mb-4">
             Cast and Crew
           </h2>
-          <Slider>
+          <Slider {...settingsCast}>
             {cast.map((castData) => (
-              <Cast
-                image={castData.profile_path}
-                castName={castData.original_name}
-                role={castData.character}
-              />
-            ))}
+            <Cast
+              key={castData.id} // Add a unique key for each cast member
+              image={castData.profile_path}
+              castName={castData.original_name}
+              role={castData.character}
+            />
+          ))}
           </Slider>
         </div>
 

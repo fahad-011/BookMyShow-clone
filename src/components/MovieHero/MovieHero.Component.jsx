@@ -15,7 +15,7 @@ const MovieHero = () => {
         <div className="lg:hidden w-full">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-            alt="cover photo"
+            alt="cover pic"
             className=" rounded responsive-img my-2 py-2"
             style={{ width: "calc(100%-2rem)" }}
           />

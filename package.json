@@ -1,28 +1,31 @@
 {
   "name": "bookmyshow-clone",
+  "homepage": "https://roc102.github.io/BookMyShow-clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@react-oauth/google": "^0.12.1",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+    "@testing-library/jest-dom": "^6.3.0",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
     "axios": "^1.6.3",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.12.0",
+    "react-icons": "^5.0.1",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
-    "react-slick": "^0.29.0",
+    "react-slick": "^0.30.1",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,6 +50,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0"
   }

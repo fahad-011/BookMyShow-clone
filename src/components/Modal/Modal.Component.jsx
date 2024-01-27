@@ -29,10 +29,10 @@ const CustomModal = () => {
 
       if (userInfoResponse.ok) {
         const userInfo = await userInfoResponse.json();
-        // const userObject = {
-        //   given_name: userInfo.given_name,
-        // };
-        // localStorage.setItem("user", JSON.stringify(userObject));
+        const userObject = {
+          given_name: userInfo.given_name,
+        };
+        localStorage.setItem("user", JSON.stringify(userObject));
       } else {
         console.error("Failed to fetch user information");
       }

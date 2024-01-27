@@ -71,7 +71,7 @@ const MoviePage = () => {
 
   const settingsCast = {
     arrows: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     infinite: true,
     dots: false,
     // speed: 500,

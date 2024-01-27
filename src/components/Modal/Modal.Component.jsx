@@ -1,11 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useGoogleLogin } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
 
 const CustomModal = () => {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => {
@@ -140,7 +137,6 @@ const CustomModal = () => {
                 {/* Continue with Email */}
                 <button className="border border-gray-300 hover:bg-gray-200 text-gray-800 py-2 px-4 rounded-full w-full mb-4 flex items-center justify-center">
                   <span className="mr-2">
-                    {/* Email logo SVG */}
                     <img
                       src="https://in.bmscdn.com/webin/common/icons/email.svg"
                       alt="Email Logo"

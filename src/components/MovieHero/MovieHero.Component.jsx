@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { MovieContext } from "../../context/Movie.context";
 import MovieInfo from "./MovieInfo.Component";
 
@@ -7,6 +7,10 @@ const MovieHero = () => {
   // const { movie } = useContext(MovieContext)
   const genres = movie.genres?.map(({ name }) => name).join(", ");
   // console.log(genres);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

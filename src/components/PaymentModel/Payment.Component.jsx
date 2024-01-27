@@ -9,7 +9,7 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
 
   const launchRazorPay = () => {
     let options = {
-      key: "rzp_test_Eq7ZcS442TbU1l",
+      key: process.env.REACT_APP_RAZORPAY_KEY,
       amount: price * 100,
       curency: "INR",
       name: "Book My Show Clone",
@@ -25,7 +25,6 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
 
     let razorPay = window.Razorpay(options);
     razorPay.open();
-    
   };
   return (
     <>

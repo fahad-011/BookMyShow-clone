@@ -59,7 +59,9 @@ function NavLg() {
             Hampi <BiChevronDown />
           </span>
           <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
-            Sign In
+            {localStorage.getItem("user")
+              ? JSON.parse(localStorage.getItem("user")).given_name
+              : "Sign In"}
           </button>
           <div className="w-8 h-8 text-white">
             <BiMenu className="w-full h-full" />

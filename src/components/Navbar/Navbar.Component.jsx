@@ -1,5 +1,5 @@
-import React from "react";
 import { BiChevronDown, BiMenu, BiSearch } from "react-icons/bi";
+import CustomModal from "../Modal/Modal.Component";
 
 function NavSm() {
   return (
@@ -58,9 +58,8 @@ function NavLg() {
           <span className="text-gray-200 text-base flex items-center cursor-pointer hover:text-white ">
             Hampi <BiChevronDown />
           </span>
-          <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
-            Sign In
-          </button>
+          <CustomModal />
+
           <div className="w-8 h-8 text-white">
             <BiMenu className="w-full h-full" />
           </div>

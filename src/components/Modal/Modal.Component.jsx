@@ -1,9 +1,12 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
+import { useNavigate } from "react-router-dom";
 
 const CustomModal = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const closeModal = () => {
     setIsOpen(false);
@@ -30,6 +33,7 @@ const CustomModal = () => {
           given_name: userInfo.given_name,
         };
         localStorage.setItem("user", JSON.stringify(userObject));
+        navigate("/");
       } else {
         console.error("Failed to fetch user information");
       }
@@ -43,7 +47,7 @@ const CustomModal = () => {
         className="bg-red-600 text-white px-2 py-1 text-sm rounded"
       >
         {localStorage.getItem("user")
-          ? JSON.parse(localStorage.getItem("user")).given_name
+          ? `Hi, ${JSON.parse(localStorage.getItem("user")).given_name}`
           : "Sign In"}
       </button>
 
@@ -100,6 +104,7 @@ const CustomModal = () => {
                 {/* Continue with Google */}
                 <button
                   onClick={() => {
+                    localStorage.clear();
                     googleLogin();
                     closeModal();
                   }}

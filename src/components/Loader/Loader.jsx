@@ -1,5 +1,5 @@
 import React from "react";
-import "./FullPageLoader.css"; // Import the CSS file with spinner styles
+import "./Loader.css";
 
 const Spinner = () => {
   return (

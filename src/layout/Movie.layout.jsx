@@ -1,14 +1,14 @@
 import Footer from "../components/Footer/Footer.Component";
 
 // component
-import MovieNavbar from "../components/Navbar/MovieNavbar.Component";
+import Navbar from "../components/Navbar/Navbar.Component";
 
 const MovielayoutHoc =
   (Component) =>
   ({ ...props }) => {
     return (
       <div>
-        <MovieNavbar />
+        <Navbar />
         <Component {...props} />
       </div>
     );

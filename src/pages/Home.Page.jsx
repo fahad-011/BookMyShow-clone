@@ -87,5 +87,3 @@ const HomePage = () => {
 };
 
 export default DefaultlayoutHoc(HomePage);
-
-// rafce

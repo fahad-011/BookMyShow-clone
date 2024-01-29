@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# BookMyShow Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](demo.gif)
 
-## Available Scripts
+Welcome to the BookMyShow Clone project! This React-based application aims to replicate the user interface and functionality of the popular ticket booking platform, BookMyShow. Whether you're a developer looking to explore React or someone interested in creating a custom ticket booking app, this project provides a comprehensive foundation.
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+BookMyShow is a popular platform that allows users to browse and book tickets for movies, events, and various entertainment shows. This clone project recreates the key features of the BookMyShow platform, providing a seamless and interactive user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Key Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Home Page
 
-### `npm test`
+- Dynamic landing page showcasing upcoming movies, events, and trending shows.
+- Featured banners highlighting special promotions and offers.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Movie Page
 
-### `npm run build`
+- Detailed information about a selected movie, including showtimes, cast, and reviews.
+- Option to select seats and book tickets for a specific show.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Event Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Information about upcoming events, concerts, and performances.
+- Easy booking process for tickets to events.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Order Page
 
-### `npm run eject`
+- Seamless order process, allowing users to add tickets to their cart and complete the booking.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Get the App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Download the BookMyShow Clone app now and enjoy a seamless ticket booking experience! 🎫🍿
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Libraries Used:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Library Name       | Description                              |
+| ------------------ | ---------------------------------------- |
+| React Js           | Frontend Framework                       |
+| React Router       | Routing library                          |
+| React Slick        | For carousel implementation              |
+| slick-carousel     | Carousel library (used with React Slick) |
+| Axios              | HTTP client for making API requests      |
+| headlessui/react   | Accessible React components              |
+| react-oauth/google | Google OAuth library for authentication  |
+| React Icons        | Icon library for React                   |
+| React Helmet       | Manage document head for SEO             |
+| Tailwind CSS       | Utility-first CSS framework              |
 
-## Learn More
+## Tools Used:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Tool Name | Description          |
+| --------- | -------------------- |
+| npm       | Package Manager tool |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation and Usage Guide
 
-### Code Splitting
+### Fork the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Click the "Fork" button at the top right corner of the page. This will create a copy of the repository under your GitHub account.
 
-### Analyzing the Bundle Size
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To run the Project locally, follow these steps:
 
-### Making a Progressive Web App
+1. Clone the Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   git clone https://github.com/your-username/BookMyShow-clone.git
+   ```
 
-### Advanced Configuration
+2. Navigate to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   cd BookMyShow-clone
+   ```
 
-### Deployment
+3. Install the dependencies using npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   ```bash
+   npm install
+   ```
 
-### `npm run build` fails to minify
+### Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create a `.env` file in the root directory and add the following configurations:
+
+```env
+REACT_APP_API_KEY = 'YOUR_MOVIEDB_API_KEY'
+REACT_APP_GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID'
+REACT_APP_RAZORPAY_KEY = 'YOUR_RAZORPAY_API_KEY'
+REACT_APP_OPENCAGE_API_KEY = 'YOUR_OPENCAGE_API_KEY'
+```
+
+Replace the placeholder values `<YOUR_MOVIEDB_API_KEY>`, `<YOUR_GOOGLE_CLIENT_ID>`, `<YOUR_RAZORPAY_API_KEY>`, and `<YOUR_OPENCAGE_API_KEY>` with your actual API keys. You can obtain these keys from the following resources:
+
+- MovieDB API Key: [The MovieDB API](https://www.themoviedb.org/documentation/api)
+- Google Cloud API Key: [Google Cloud Console](https://console.cloud.google.com/)
+- Razorpay API Key: [Razorpay Dashboard](https://dashboard.razorpay.com/app/keys)
+- OpenCage API Key: [OpenCage Data](https://opencagedata.com/api)
+
+3. Install the dependencies using npm
+
+```bash
+npm install
+```
+
+## Usage
+
+To start the development server and view the application, run the following command:
+
+```bash
+npm start
+```
+
+This will start the application on your computer's local development server, accessible at `http://localhost:3000`
+
+## ScreenShots
+
+# Home Page:
+
+![App Screenshot](/src/Screenshots/Home.png)
+
+# Movie Page:
+
+![App Screenshot](/src/Screenshots/Movie.png)
+
+# Sign In Page:
+
+![App Screenshot](/src/Screenshots/SignIn.png)
+
+# Payment Page
+
+![App Screenshot](/src/Screenshots/Payment.png)

@@ -217,7 +217,7 @@ const MoviePage = () => {
               <Slider {...settingsCast}>
                 {cast.map((castData) => (
                   <Cast
-                    key={castData.id} // Add a unique key for each cast member
+                    key={castData.id}
                     image={castData.profile_path}
                     castName={castData.original_name}
                     role={castData.character}

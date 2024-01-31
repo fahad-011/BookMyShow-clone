@@ -100,11 +100,6 @@ Replace the placeholder values `<YOUR_MOVIEDB_API_KEY>`, `<YOUR_GOOGLE_CLIENT_ID
 - Razorpay API Key: [Razorpay Dashboard](https://dashboard.razorpay.com/app/keys)
 - OpenCage API Key: [OpenCage Data](https://opencagedata.com/api)
 
-3. Install the dependencies using npm
-
-```bash
-npm install
-```
 
 ## Usage
 

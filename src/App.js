@@ -1,16 +1,11 @@
-import axios from "axios";
-
-// Routes
 import { Routes, Route } from "react-router-dom";
-
-// React Slick CSS
+import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// Pages
 import HomePage from "./pages/Home.Page";
 import MoviePage from "./pages/Movie.Page";
 import PlayPage from "./pages/Play.Page";
+import ErrorPage from "./pages/404";
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3";
 axios.defaults.params = {};
@@ -22,6 +17,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/movie/:id" element={<MoviePage />} />
       <Route path="/plays" element={<PlayPage />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }
